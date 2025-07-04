@@ -1,10 +1,13 @@
 ﻿// Models/UOMGroup.cs
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Collections.Generic; // Required for ICollection if you link UOMs
 
 namespace backendDistributor.Models
 {
+    /// <summary>
+    /// Represents a group for Units of Measure (e.g., Weight, Volume, Length).
+    /// </summary>
     public class UOMGroup
     {
         [Key]
@@ -15,10 +18,16 @@ namespace backendDistributor.Models
         [StringLength(100, ErrorMessage = "UOM Group name cannot be longer than 100 characters.")]
         public string Name { get; set; }
 
-        // Optional: If UOMs belong to a UOMGroup, you might have a navigation property
-        // public virtual ICollection<UOM> UOMs { get; set; } = new List<UOM>();
+        [StringLength(250, ErrorMessage = "Description cannot be longer than 250 characters.")]
+        public string? Description { get; set; } // Nullable string for optional description
 
-        // public string Description { get; set; }
-        // public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedDate { get; set; }
+
+        // Constructor to set the creation date automatically
+        public UOMGroup()
+        {
+            Name = string.Empty; // Initialize to prevent null reference on Name
+            CreatedDate = DateTime.UtcNow;
+        }
     }
 }

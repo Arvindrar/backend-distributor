@@ -22,6 +22,28 @@ namespace backendDistributor.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("SalesOrderAttachment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("SalesOrderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SalesOrderId");
+
+                    b.ToTable("SalesOrderAttachments");
+                });
+
             modelBuilder.Entity("backendDistributor.Models.Customer", b =>
                 {
                     b.Property<int>("Id")
@@ -105,7 +127,7 @@ namespace backendDistributor.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customer");
+                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("backendDistributor.Models.CustomerGroup", b =>
@@ -124,6 +146,136 @@ namespace backendDistributor.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CustomerGroups");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.GRPO", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeliveryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("GRPODate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GRPONo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GRPORemarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PurchaseOrderNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ShipToAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VendorCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VendorName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VendorRefNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GRPOs");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.GRPOAttachment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("GRPOId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GRPOId");
+
+                    b.ToTable("GRPOAttachments");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.GRPOItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("GRPOId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ProductCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Quantity")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("TaxCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("TaxPrice")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Total")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UOM")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WarehouseLocation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GRPOId");
+
+                    b.ToTable("GRPOItems");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.GRPONumberTracker", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("LastUsedNumber")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GRPONumberTrackers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 2,
+                            LastUsedNumber = 1000000
+                        });
                 });
 
             modelBuilder.Entity("backendDistributor.Models.Product", b =>
@@ -195,6 +347,129 @@ namespace backendDistributor.Migrations
                     b.ToTable("ProductGroups");
                 });
 
+            modelBuilder.Entity("backendDistributor.Models.PurchaseOrder", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeliveryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("PODate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PurchaseOrderNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PurchaseRemarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ShipToAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VendorCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VendorName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VendorRefNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PurchaseOrders");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.PurchaseOrderAttachment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("PurchaseOrderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PurchaseOrderId");
+
+                    b.ToTable("PurchaseOrderAttachments");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.PurchaseOrderItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ProductCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("PurchaseOrderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Quantity")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("TaxCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("TaxPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UOM")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WarehouseLocation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PurchaseOrderId");
+
+                    b.ToTable("PurchaseOrderItems");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.PurchaseOrderNumberTracker", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("LastUsedNumber")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PurchaseOrderNumberTrackers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            LastUsedNumber = 1000000
+                        });
+                });
+
             modelBuilder.Entity("backendDistributor.Models.Route", b =>
                 {
                     b.Property<int>("Id")
@@ -221,10 +496,47 @@ namespace backendDistributor.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Address")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("ContactNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Department")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("JobTitle")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("Position")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Remarks")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.HasKey("Id");
 
@@ -237,95 +549,36 @@ namespace backendDistributor.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("CustomerCode")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int?>("CustomerId")
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CustomerName")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CustomerRefNumber")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("DeliveryDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DocumentDetails")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<DateTime?>("ModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("SODate")
+                    b.Property<DateTime>("SODate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("SalesEmployee")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SalesOrderNo")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SalesRemarks")
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ShipToAddress")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CustomerId");
 
                     b.ToTable("SalesOrders");
-                });
-
-            modelBuilder.Entity("backendDistributor.Models.SalesOrderAttachment", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ContentType")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("FileName")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<long>("FileSize")
-                        .HasColumnType("bigint");
-
-                    b.Property<Guid>("SalesOrderId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("StoredFileName")
-                        .IsRequired()
-                        .HasMaxLength(1024)
-                        .HasColumnType("nvarchar(1024)");
-
-                    b.Property<DateTime>("UploadedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SalesOrderId");
-
-                    b.ToTable("SalesOrderAttachments");
                 });
 
             modelBuilder.Entity("backendDistributor.Models.SalesOrderItem", b =>
@@ -335,51 +588,71 @@ namespace backendDistributor.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18, 2)");
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ProductCode")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductName")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Quantity")
-                        .HasPrecision(18, 4)
-                        .HasColumnType("decimal(18, 4)");
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<Guid>("SalesOrderId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("TaxCode")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("TaxPrice")
-                        .HasColumnType("decimal(18, 2)");
+                    b.Property<decimal?>("TaxPrice")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18, 2)");
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UOM")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("WarehouseLocation")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
 
                     b.HasIndex("SalesOrderId");
 
                     b.ToTable("SalesOrderItems");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.SalesOrderNumberTracker", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("LastUsedNumber")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SalesOrderNumberTrackers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            LastUsedNumber = 1000000
+                        });
                 });
 
             modelBuilder.Entity("backendDistributor.Models.ShippingType", b =>
@@ -469,6 +742,13 @@ namespace backendDistributor.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -578,16 +858,35 @@ namespace backendDistributor.Migrations
                     b.ToTable("VendorGroups");
                 });
 
-            modelBuilder.Entity("backendDistributor.Models.SalesOrder", b =>
+            modelBuilder.Entity("backendDistributor.Models.Warehouse", b =>
                 {
-                    b.HasOne("backendDistributor.Models.Customer", "Customer")
-                        .WithMany()
-                        .HasForeignKey("CustomerId");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Navigation("Customer");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Warehouses");
                 });
 
-            modelBuilder.Entity("backendDistributor.Models.SalesOrderAttachment", b =>
+            modelBuilder.Entity("SalesOrderAttachment", b =>
                 {
                     b.HasOne("backendDistributor.Models.SalesOrder", "SalesOrder")
                         .WithMany("Attachments")
@@ -598,28 +897,80 @@ namespace backendDistributor.Migrations
                     b.Navigation("SalesOrder");
                 });
 
+            modelBuilder.Entity("backendDistributor.Models.GRPOAttachment", b =>
+                {
+                    b.HasOne("backendDistributor.Models.GRPO", "GRPO")
+                        .WithMany("Attachments")
+                        .HasForeignKey("GRPOId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GRPO");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.GRPOItem", b =>
+                {
+                    b.HasOne("backendDistributor.Models.GRPO", "GRPO")
+                        .WithMany("GRPOItems")
+                        .HasForeignKey("GRPOId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GRPO");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.PurchaseOrderAttachment", b =>
+                {
+                    b.HasOne("backendDistributor.Models.PurchaseOrder", "PurchaseOrder")
+                        .WithMany("Attachments")
+                        .HasForeignKey("PurchaseOrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PurchaseOrder");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.PurchaseOrderItem", b =>
+                {
+                    b.HasOne("backendDistributor.Models.PurchaseOrder", "PurchaseOrder")
+                        .WithMany("PurchaseItems")
+                        .HasForeignKey("PurchaseOrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PurchaseOrder");
+                });
+
             modelBuilder.Entity("backendDistributor.Models.SalesOrderItem", b =>
                 {
-                    b.HasOne("backendDistributor.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
-
                     b.HasOne("backendDistributor.Models.SalesOrder", "SalesOrder")
-                        .WithMany("SalesOrderItems")
+                        .WithMany("SalesItems")
                         .HasForeignKey("SalesOrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
-
                     b.Navigation("SalesOrder");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.GRPO", b =>
+                {
+                    b.Navigation("Attachments");
+
+                    b.Navigation("GRPOItems");
+                });
+
+            modelBuilder.Entity("backendDistributor.Models.PurchaseOrder", b =>
+                {
+                    b.Navigation("Attachments");
+
+                    b.Navigation("PurchaseItems");
                 });
 
             modelBuilder.Entity("backendDistributor.Models.SalesOrder", b =>
                 {
                     b.Navigation("Attachments");
 
-                    b.Navigation("SalesOrderItems");
+                    b.Navigation("SalesItems");
                 });
 #pragma warning restore 612, 618
         }

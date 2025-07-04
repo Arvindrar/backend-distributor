@@ -1,4 +1,4 @@
-using backendDistributor.Models;
+﻿using backendDistributor.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders; // For StaticFiles
 using System.IO;                         // For Path
@@ -6,12 +6,18 @@ using System.IO;                         // For Path
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(x =>
+    x.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<CustomerDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CustomerDbContext")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CustomerDbContext"))
+        .LogTo(Console.WriteLine, LogLevel.Information) // 🔥 Show SQL
+           .EnableSensitiveDataLogging()
+           .EnableDetailedErrors()
+           );
 
 // Define the CORS policy
 builder.Services.AddCors(options =>

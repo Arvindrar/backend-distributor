@@ -12,7 +12,7 @@ namespace backendDistributor.Models
 
         [Required(ErrorMessage = "UOM name is required.")]
         [StringLength(100, ErrorMessage = "UOM name cannot be longer than 100 characters.")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         // You can add other properties if needed in the future, e.g.:
         // public string Description { get; set; }

@@ -11,7 +11,7 @@ namespace backendDistributor.Models
         // --- Original DbSets (assuming these were correct from your project) ---
         public DbSet<Vendor> Vendors { get; set; }
         public DbSet<VendorGroup> VendorGroups { get; set; }
-        public DbSet<Customer> Customer { get; set; } // Note: Standard convention is Plural (Customers)
+        public DbSet<Customer> Customers { get; set; } // Note: Standard convention is Plural (Customers)
         public DbSet<CustomerGroup> CustomerGroups { get; set; }
         public DbSet<Route> Routes { get; set; }
         public DbSet<SalesEmployee> SalesEmployees { get; set; }
@@ -22,63 +22,77 @@ namespace backendDistributor.Models
         public DbSet<ProductGroup> ProductGroups { get; set; }
         public DbSet<UOM> UOMs { get; set; } // This is the DbSet for the UOMsController CS1061 error
         public DbSet<UOMGroup> UOMGroups { get; set; }
-
-
-        // --- New DbSets for Sales ---
-#pragma warning disable CS8618 // Non-nullable field is set by EF Core.
+        public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<SalesOrder> SalesOrders { get; set; }
+        public DbSet<SalesOrderNumberTracker> SalesOrderNumberTrackers { get; set; }
         public DbSet<SalesOrderItem> SalesOrderItems { get; set; }
         public DbSet<SalesOrderAttachment> SalesOrderAttachments { get; set; }
-#pragma warning restore CS8618
+
+        public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
+        public DbSet<PurchaseOrderItem> PurchaseOrderItems { get; set; }
+        public DbSet<PurchaseOrderAttachment> PurchaseOrderAttachments { get; set; }
+        public DbSet<PurchaseOrderNumberTracker> PurchaseOrderNumberTrackers { get; set; }
+
+        public DbSet<GRPO> GRPOs { get; set; }
+        public DbSet<GRPOItem> GRPOItems { get; set; }
+        public DbSet<GRPOAttachment> GRPOAttachments { get; set; }
+        public DbSet<GRPONumberTracker> GRPONumberTrackers { get; set; }
+
+
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // --- Configure SalesOrder Relationships ---
-            modelBuilder.Entity<SalesOrder>(entity =>
-            {
-                entity.HasMany(so => so.SalesOrderItems)
-                    .WithOne(item => item.SalesOrder)
-                    .HasForeignKey(item => item.SalesOrderId)
-                    .OnDelete(DeleteBehavior.Cascade);
 
-                entity.HasMany(so => so.Attachments)
-                    .WithOne(att => att.SalesOrder)
-                    .HasForeignKey(att => att.SalesOrderId)
-                    .OnDelete(DeleteBehavior.Cascade);
-            });
+            // ✅ Fix table name explicitly
+            //modelBuilder.Entity<Customer>().ToTable("Customer");
 
-
-            // --- Configure Decimal Precision for SalesOrderItem ---
             modelBuilder.Entity<SalesOrderItem>(entity =>
             {
-                // For Quantity: If it can have decimals (e.g., 10.5 units)
-                // Adjust precision and scale based on your expected range.
-                entity.Property(e => e.Quantity).HasPrecision(18, 4); // Example: 18 total digits, 4 decimal places
-
-                // Price, TaxPrice, and Total in SalesOrderItem.cs already use [Column(TypeName = "decimal(18, 2)")]
-                // If you remove those attributes, you would configure precision here:
-                // entity.Property(e => e.Price).HasPrecision(18, 2);
-                // entity.Property(e => e.TaxPrice).HasPrecision(18, 2);
-                // entity.Property(e => e.Total).HasPrecision(18, 2);
+                entity.Property(e => e.Price).HasPrecision(18, 2);
+                entity.Property(e => e.Quantity).HasPrecision(18, 2);
+                entity.Property(e => e.TaxPrice).HasPrecision(18, 2);
+                entity.Property(e => e.Total).HasPrecision(18, 2);
             });
 
-            // --- OPTIONAL: Configure Decimal Precision for Product (Example) ---
-            // If your Product model has decimal properties like RetailPrice or WholesalePrice,
-            // and they don't have [Column(TypeName = "...")] attributes, configure them here.
-            /*
-            modelBuilder.Entity<Product>(entity =>
+            modelBuilder.Entity<SalesOrderItem>()
+               .HasOne(i => i.SalesOrder)
+               .WithMany(o => o.SalesItems)
+               .HasForeignKey(i => i.SalesOrderId);
+
+            modelBuilder.Entity<SalesOrderNumberTracker>().HasData(
+        new SalesOrderNumberTracker { Id = 1, LastUsedNumber = 1000000 }
+    );
+            modelBuilder.Entity<PurchaseOrderNumberTracker>().HasData(new PurchaseOrderNumberTracker { Id = 1, LastUsedNumber = 1000000 });
+
+            modelBuilder.Entity<GRPOItem>(entity =>
             {
-                // Assuming Product has these properties and they are decimal
-                // entity.Property(p => p.RetailPrice).HasPrecision(18, 2);
-                // entity.Property(p => p.WholesalePrice).HasPrecision(18, 2);
+                entity.Property(e => e.Price).HasPrecision(18, 2);
+                entity.Property(e => e.Quantity).HasPrecision(18, 2);
+                entity.Property(e => e.TaxPrice).HasPrecision(18, 2);
+                entity.Property(e => e.Total).HasPrecision(18, 2);
             });
-            */
 
-            // --- Add any other specific model configurations you had or need ---
-            // For example, if you had configurations for Customer, ProductGroup, etc.
+            // 2. Configure the one-to-many relationship for GRPO and GRPOItem
+            modelBuilder.Entity<GRPOItem>()
+               .HasOne(i => i.GRPO)
+               .WithMany(g => g.GRPOItems)
+               .HasForeignKey(i => i.GRPOId);
+
+            // 3. Configure the one-to-many relationship for GRPO and GRPOAttachment
+            modelBuilder.Entity<GRPOAttachment>()
+               .HasOne(a => a.GRPO)
+               .WithMany(g => g.Attachments)
+               .HasForeignKey(a => a.GRPOId);
+
+            // 4. Seed the GRPONumberTracker
+            modelBuilder.Entity<GRPONumberTracker>().HasData(
+                new GRPONumberTracker { Id = 2, LastUsedNumber = 1000000 }
+            );
+
         }
     }
 }

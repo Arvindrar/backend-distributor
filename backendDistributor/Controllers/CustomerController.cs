@@ -25,12 +25,12 @@ namespace backendDistributor.Controllers
             [FromQuery] string? group,
             [FromQuery] string? searchTerm)
         {
-            if (_context.Customer == null)
+            if (_context.Customers == null)
             {
                 return NotFound(new ProblemDetails { Title = "Customer data store is not available.", Status = StatusCodes.Status404NotFound });
             }
 
-            var query = _context.Customer.AsQueryable();
+            var query = _context.Customers.AsQueryable();
 
             if (!string.IsNullOrEmpty(group))
             {
@@ -53,12 +53,12 @@ namespace backendDistributor.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Customer>> GetCustomer(int id) // Renamed from GetCustomerById for consistency with CreatedAtAction
         {
-            if (_context.Customer == null)
+            if (_context.Customers == null)
             {
                 return NotFound(new ProblemDetails { Title = "Customer data store is not available.", Status = StatusCodes.Status404NotFound });
             }
 
-            var customer = await _context.Customer.FindAsync(id);
+            var customer = await _context.Customers.FindAsync(id);
 
             if (customer == null)
             {
@@ -72,7 +72,7 @@ namespace backendDistributor.Controllers
         [HttpPost]
         public async Task<ActionResult<Customer>> PostCustomer(Customer customer) // customer is the DTO from request body
         {
-            if (_context.Customer == null)
+            if (_context.Customers == null)
             {
                 // For server errors, Problem is more appropriate than just NotFound or simple string.
                 return Problem("Entity set 'CustomerDbContext.Customer' is null.", statusCode: StatusCodes.Status500InternalServerError);
@@ -87,7 +87,7 @@ namespace backendDistributor.Controllers
             }
 
             // 2. Custom Business Logic Validation: Check if customer code already exists
-            if (await _context.Customer.AnyAsync(c => c.Code == customer.Code))
+            if (await _context.Customers.AnyAsync(c => c.Code == customer.Code))
             {
                 // Add a model error specific to the 'Code' field
                 ModelState.AddModelError(nameof(Customer.Code), "This Customer Code already exists."); // Using nameof for type safety
@@ -107,7 +107,7 @@ namespace backendDistributor.Controllers
             }
 
 
-            _context.Customer.Add(customer);
+            _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetCustomer), new { id = customer.Id }, customer);
@@ -131,7 +131,7 @@ namespace backendDistributor.Controllers
 
             // 2. Custom Business Logic Validation:
             // Check if changing code to one that already exists (excluding itself)
-            if (await _context.Customer.AnyAsync(c => c.Code == customer.Code && c.Id != id))
+            if (await _context.Customers.AnyAsync(c => c.Code == customer.Code && c.Id != id))
             {
                 ModelState.AddModelError(nameof(Customer.Code), "This Customer Code already exists for another customer.");
                 return ValidationProblem(ModelState); // Return 400 with this specific error
@@ -185,12 +185,12 @@ namespace backendDistributor.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomer(int id)
         {
-            if (_context.Customer == null)
+            if (_context.Customers == null)
             {
                 return NotFound(new ProblemDetails { Title = "Customer data store is not available.", Status = StatusCodes.Status404NotFound });
             }
 
-            var customer = await _context.Customer.FindAsync(id);
+            var customer = await _context.Customers.FindAsync(id);
             if (customer == null)
             {
                 return NotFound(new ProblemDetails { Title = $"Customer with ID {id} not found.", Status = StatusCodes.Status404NotFound });
@@ -198,7 +198,7 @@ namespace backendDistributor.Controllers
 
             try
             {
-                _context.Customer.Remove(customer);
+                _context.Customers.Remove(customer);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException ex) // Handle potential foreign key constraint violations or other DB errors
@@ -218,7 +218,7 @@ namespace backendDistributor.Controllers
 
         private bool CustomerExists(int id)
         {
-            return (_context.Customer?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Customers?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

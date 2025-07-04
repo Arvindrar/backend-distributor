@@ -3,24 +3,220 @@
   "WorkspaceRootPath": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250619073900_taxtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250619073900_taxtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\grposcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\grposcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\taxdeclarationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\taxdeclarationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\grpolistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\grpolistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\grpocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\grpocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\grpoitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\grpoitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250704080801_GRPOadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backendDistributor\\Migrations\\20250704080801_GRPOadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\grponumbertracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\grponumbertracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\customerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\customerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\taxdeclarationupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\taxdeclarationupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\grpoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\grpoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\grpoattachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\grpoattachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\grpo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\grpo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\purchaseorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\purchaseorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\purchaseorderlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\purchaseorderlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\purchaseordercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\purchaseordercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\purchaseitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\purchaseitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\purchaseordernumbertracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\purchaseordernumbertracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\purchaseorderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\purchaseorderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\purchaseorderattachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\purchaseorderattachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\purchaseorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\purchaseorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\salesorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\salesorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\salesorderlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\salesorderlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\salesordercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\salesordercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\salesitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\salesitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\salesordernumbertracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\salesordernumbertracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\salesorderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\salesorderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\salesorderattachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\salesorderattachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\salesorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\salesorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\salesemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\salesemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\salesemployeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\salesemployeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250627060821_replaceuomgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250627060821_replaceuomgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\uomgroupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\uomgroupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\uomgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\uomgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\warehousescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\warehousescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\warehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\warehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\vendorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\vendorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250625065239_removeattachmentfilenamefromsalesorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250625065239_removeattachmentfilenamefromsalesorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250624105418_removerowversionfromsalesorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250624105418_removerowversionfromsalesorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250624073116_removedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250624073116_removedefault.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250624081001_changetimestamptorowversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250624081001_changetimestamptorowversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250624062448_addrowversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250624062448_addrowversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250624065556_adddefaulttorow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250624065556_adddefaulttorow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623065831_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backendDistributor\\Migrations\\20250623065831_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623065053_RestoreEverything.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backendDistributor\\Migrations\\20250623065053_RestoreEverything.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623064317_AddCustomerTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backendDistributor\\Migrations\\20250623064317_AddCustomerTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623063939_Addtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backendDistributor\\Migrations\\20250623063939_Addtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623061659_SalesADDt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backendDistributor\\Migrations\\20250623061659_SalesADDt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623061347_Sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backendDistributor\\Migrations\\20250623061347_Sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623061155_AddSalesorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backendDistributor\\Migrations\\20250623061155_AddSalesorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623052231_AddTableSale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:backendDistributor\\Migrations\\20250623052231_AddTableSale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\taxdeclarationcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\taxdeclarationcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\taxdeclarationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\taxdeclarationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\dtos\\taxdeclarationupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\dtos\\taxdeclarationupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\taxdeclarationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,14 +227,6 @@
       "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\taxdeclaration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250618070552_vendortable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250618070552_vendortable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\vendorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\vendorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,16 +235,40 @@
       "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\vendorgroupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250616115037_vendorgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250616115037_vendorgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\models\\vendorgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\models\\vendorgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\controllers\\salesorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\controllers\\salesorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250623070614_initschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250623070614_initschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250623085219_addsonumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250623085219_addsonumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250624111352_removerowversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250624111352_removerowversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250624085543_addrowversiontosalesorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250624085543_addrowversiontosalesorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250625103741_removetaxcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250625103741_removetaxcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250625105154_removetaxpercent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250625105154_removetaxpercent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250703100044_purchaseitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250703100044_purchaseitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|d:\\react-projects\\vedhasoft-distributor\\backenddistributor\\backenddistributor\\migrations\\20250703055333_purchaseadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCCCB056-0CE5-4E0B-BA71-ECFD6D0BFC94}|backendDistributor\\backendDistributor.csproj|solutionrelative:backenddistributor\\migrations\\20250703055333_purchaseadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,69 +278,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250619073900_TaxTable.cs",
-              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250619073900_TaxTable.cs",
-              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250619073900_TaxTable.cs",
-              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250619073900_TaxTable.cs",
-              "RelativeToolTip": "backendDistributor\\Migrations\\20250619073900_TaxTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "GRPOCreateDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\GRPOCreateDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\GRPOCreateDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\GRPOCreateDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\GRPOCreateDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwA8AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:39:00.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TaxDeclarationsController.cs",
-              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\TaxDeclarationsController.cs",
-              "RelativeDocumentMoniker": "backendDistributor\\Controllers\\TaxDeclarationsController.cs",
-              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\TaxDeclarationsController.cs",
-              "RelativeToolTip": "backendDistributor\\Controllers\\TaxDeclarationsController.cs",
-              "ViewState": "AgIAAPUAAAAAAAAAAAAswAIBAAB/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:34:06.094Z",
+              "WhenOpened": "2025-07-04T07:59:44.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TaxDeclarationUpdateDto.cs",
-              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\Dtos\\TaxDeclarationUpdateDto.cs",
-              "RelativeDocumentMoniker": "backendDistributor\\Models\\Dtos\\TaxDeclarationUpdateDto.cs",
-              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\Dtos\\TaxDeclarationUpdateDto.cs",
-              "RelativeToolTip": "backendDistributor\\Models\\Dtos\\TaxDeclarationUpdateDto.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCQAAAABAAAAAAAAAA==",
+              "Title": "GRPOItemDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\GRPOItemDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\GRPOItemDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\GRPOItemDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\GRPOItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:26:32.817Z",
+              "WhenOpened": "2025-07-04T07:58:53.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GRPOsController.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\GRPOsController.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Controllers\\GRPOsController.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\GRPOsController.cs",
+              "RelativeToolTip": "backendDistributor\\Controllers\\GRPOsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwEEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T08:01:31.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GRPOListDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\GRPOListDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\GRPOListDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\GRPOListDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\GRPOListDto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAmwA0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T08:00:30.621Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "TaxDeclarationCreateDto.cs",
-              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\Dtos\\TaxDeclarationCreateDto.cs",
-              "RelativeDocumentMoniker": "backendDistributor\\Models\\Dtos\\TaxDeclarationCreateDto.cs",
-              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\Dtos\\TaxDeclarationCreateDto.cs",
-              "RelativeToolTip": "backendDistributor\\Models\\Dtos\\TaxDeclarationCreateDto.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCQAAAABAAAAAAAAAA==",
+              "Title": "20250704080801_GRPOadd.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250704080801_GRPOadd.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250704080801_GRPOadd.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250704080801_GRPOadd.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250704080801_GRPOadd.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:25:29.704Z",
+              "WhenOpened": "2025-07-04T08:08:02.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "CustomerDbContext.cs",
               "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\CustomerDbContext.cs",
               "RelativeDocumentMoniker": "backendDistributor\\Models\\CustomerDbContext.cs",
               "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\CustomerDbContext.cs",
               "RelativeToolTip": "backendDistributor\\Models\\CustomerDbContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T06:50:25.584Z",
               "EditorCaption": ""
@@ -136,45 +361,342 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "TaxDeclarationDto.cs",
-              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\TaxDeclarationDto.cs",
-              "RelativeDocumentMoniker": "backendDistributor\\Models\\TaxDeclarationDto.cs",
-              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\TaxDeclarationDto.cs",
-              "RelativeToolTip": "backendDistributor\\Models\\TaxDeclarationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAiAAAAAAAAAA==",
+              "Title": "GRPONumberTracker.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\GRPONumberTracker.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\GRPONumberTracker.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\GRPONumberTracker.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\GRPONumberTracker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:19:54.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TaxDeclaration.cs",
-              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\TaxDeclaration.cs",
-              "RelativeDocumentMoniker": "backendDistributor\\Models\\TaxDeclaration.cs",
-              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\TaxDeclaration.cs",
-              "RelativeToolTip": "backendDistributor\\Models\\TaxDeclaration.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA7wCkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:18:20.432Z",
+              "WhenOpened": "2025-07-04T07:57:48.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "20250618070552_Vendortable.cs",
-              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250618070552_Vendortable.cs",
-              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250618070552_Vendortable.cs",
-              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250618070552_Vendortable.cs",
-              "RelativeToolTip": "backendDistributor\\Migrations\\20250618070552_Vendortable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "GRPOItem.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\GRPOItem.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\GRPOItem.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\GRPOItem.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\GRPOItem.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA5wBQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T07:05:52.929Z",
+              "WhenOpened": "2025-07-04T07:57:05.536Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "GRPOAttachment.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\GRPOAttachment.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\GRPOAttachment.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\GRPOAttachment.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\GRPOAttachment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T07:56:24.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GRPO.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\GRPO.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\GRPO.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\GRPO.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\GRPO.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA2wB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T07:55:16.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PurchaseItemDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\PurchaseItemDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\PurchaseItemDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\PurchaseItemDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\PurchaseItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:42:59.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PurchaseOrderCreateDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\PurchaseOrderCreateDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\PurchaseOrderCreateDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\PurchaseOrderCreateDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\PurchaseOrderCreateDto.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:44:03.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PurchaseOrderListDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\PurchaseOrderListDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\PurchaseOrderListDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\PurchaseOrderListDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\PurchaseOrderListDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:45:18.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PurchaseOrdersController.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\PurchaseOrdersController.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Controllers\\PurchaseOrdersController.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\PurchaseOrdersController.cs",
+              "RelativeToolTip": "backendDistributor\\Controllers\\PurchaseOrdersController.cs",
+              "ViewState": "AgIAADYBAAAAAAAAAAAYwE4BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:51:40.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PurchaseOrderNumberTracker.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\PurchaseOrderNumberTracker.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\PurchaseOrderNumberTracker.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\PurchaseOrderNumberTracker.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\PurchaseOrderNumberTracker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:40:18.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PurchaseOrderItem.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\PurchaseOrderItem.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\PurchaseOrderItem.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\PurchaseOrderItem.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\PurchaseOrderItem.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwA0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:38:10.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PurchaseOrderAttachment.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\PurchaseOrderAttachment.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\PurchaseOrderAttachment.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\PurchaseOrderAttachment.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\PurchaseOrderAttachment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:39:00.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PurchaseOrder.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\PurchaseOrder.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\PurchaseOrder.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\PurchaseOrder.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\PurchaseOrder.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA2wBgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:36:34.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "20250703100044_Purchaseitems.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250703100044_Purchaseitems.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250703100044_Purchaseitems.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250703100044_Purchaseitems.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250703100044_Purchaseitems.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T10:00:44.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SalesOrdersController.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\SalesOrdersController.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Controllers\\SalesOrdersController.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\SalesOrdersController.cs",
+              "RelativeToolTip": "backendDistributor\\Controllers\\SalesOrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T12:58:59.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "20250703055333_PurchaseAdd.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250703055333_PurchaseAdd.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250703055333_PurchaseAdd.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250703055333_PurchaseAdd.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250703055333_PurchaseAdd.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:53:33.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SalesItemDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\SalesItemDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\SalesItemDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\SalesItemDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\SalesItemDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAkwBEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T14:03:36.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SalesOrderCreateDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\SalesOrderCreateDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\SalesOrderCreateDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\SalesOrderCreateDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\SalesOrderCreateDto.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T12:55:20.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SalesOrderListDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\SalesOrderListDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\SalesOrderListDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\SalesOrderListDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\SalesOrderListDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T08:29:14.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SalesOrderNumberTracker.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\SalesOrderNumberTracker.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\SalesOrderNumberTracker.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\SalesOrderNumberTracker.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\SalesOrderNumberTracker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T08:43:04.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SalesOrderItem.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\SalesOrderItem.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\SalesOrderItem.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\SalesOrderItem.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\SalesOrderItem.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T12:53:50.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SalesOrderAttachment.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\SalesOrderAttachment.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\SalesOrderAttachment.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\SalesOrderAttachment.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\SalesOrderAttachment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T05:48:26.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SalesOrder.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\SalesOrder.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\SalesOrder.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\SalesOrder.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\SalesOrder.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T12:50:41.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UOMGroupsController.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\UOMGroupsController.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Controllers\\UOMGroupsController.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\UOMGroupsController.cs",
+              "RelativeToolTip": "backendDistributor\\Controllers\\UOMGroupsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T05:58:38.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Warehouse.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\Warehouse.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\Warehouse.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\Warehouse.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\Warehouse.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAkwB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T10:40:32.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20250627060821_ReplaceUOMGroup.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250627060821_ReplaceUOMGroup.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250627060821_ReplaceUOMGroup.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250627060821_ReplaceUOMGroup.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250627060821_ReplaceUOMGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T06:08:21.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SalesEmployeeController.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\SalesEmployeeController.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Controllers\\SalesEmployeeController.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\SalesEmployeeController.cs",
+              "RelativeToolTip": "backendDistributor\\Controllers\\SalesEmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T06:57:58.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SalesEmployee.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\SalesEmployee.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\SalesEmployee.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\SalesEmployee.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\SalesEmployee.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAmwCoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T06:55:17.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "VendorController.cs",
               "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\VendorController.cs",
               "RelativeDocumentMoniker": "backendDistributor\\Controllers\\VendorController.cs",
@@ -186,7 +708,367 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 30,
+              "Title": "UOMGroup.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\UOMGroup.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\UOMGroup.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\UOMGroup.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\UOMGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:41:17.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "WarehousesController.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\WarehousesController.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Controllers\\WarehousesController.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\WarehousesController.cs",
+              "RelativeToolTip": "backendDistributor\\Controllers\\WarehousesController.cs",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAuwPUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T10:44:07.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Program.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Program.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Program.cs",
+              "RelativeToolTip": "backendDistributor\\Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAwwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T07:51:31.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "20250625103741_RemoveTaxcode.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250625103741_RemoveTaxcode.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250625103741_RemoveTaxcode.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250625103741_RemoveTaxcode.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250625103741_RemoveTaxcode.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T10:37:42.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "20250625105154_RemoveTaxpercent.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250625105154_RemoveTaxpercent.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250625105154_RemoveTaxpercent.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250625105154_RemoveTaxpercent.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250625105154_RemoveTaxpercent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T10:51:55.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "20250625065239_RemoveAttachmentFileNameFromSalesOrder.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250625065239_RemoveAttachmentFileNameFromSalesOrder.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250625065239_RemoveAttachmentFileNameFromSalesOrder.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250625065239_RemoveAttachmentFileNameFromSalesOrder.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250625065239_RemoveAttachmentFileNameFromSalesOrder.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T06:52:39.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "20250624111352_RemoveRowversion.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624111352_RemoveRowversion.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250624111352_RemoveRowversion.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624111352_RemoveRowversion.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250624111352_RemoveRowversion.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T11:13:53.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "20250624105418_RemoveRowVersionFromSalesOrder.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624105418_RemoveRowVersionFromSalesOrder.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250624105418_RemoveRowVersionFromSalesOrder.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624105418_RemoveRowVersionFromSalesOrder.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250624105418_RemoveRowVersionFromSalesOrder.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T10:54:18.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "20250624085543_AddRowVersionToSalesOrder.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624085543_AddRowVersionToSalesOrder.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250624085543_AddRowVersionToSalesOrder.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624085543_AddRowVersionToSalesOrder.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250624085543_AddRowVersionToSalesOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T08:55:43.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20250624073116_RemoveDefault.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624073116_RemoveDefault.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250624073116_RemoveDefault.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624073116_RemoveDefault.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250624073116_RemoveDefault.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T07:31:16.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20250624081001_ChangeTimestampToRowversion.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624081001_ChangeTimestampToRowversion.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250624081001_ChangeTimestampToRowversion.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624081001_ChangeTimestampToRowversion.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250624081001_ChangeTimestampToRowversion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T08:10:01.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20250624062448_AddRowversion.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624062448_AddRowversion.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250624062448_AddRowversion.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624062448_AddRowversion.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250624062448_AddRowversion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T06:24:49.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "20250624065556_AddDefaulttoRow.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624065556_AddDefaulttoRow.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250624065556_AddDefaulttoRow.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250624065556_AddDefaulttoRow.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250624065556_AddDefaulttoRow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T06:55:57.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "20250623070614_InitSchema.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623070614_InitSchema.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250623070614_InitSchema.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623070614_InitSchema.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250623070614_InitSchema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T07:06:14.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "20250623085219_AddSOnumber.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623085219_AddSOnumber.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250623085219_AddSOnumber.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623085219_AddSOnumber.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250623085219_AddSOnumber.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T08:52:20.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "20250623065053_RestoreEverything.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623065053_RestoreEverything.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250623065053_RestoreEverything.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623065053_RestoreEverything.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250623065053_RestoreEverything.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:50:53.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "20250623065831_InitialCreate.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623065831_InitialCreate.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250623065831_InitialCreate.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623065831_InitialCreate.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250623065831_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:58:32.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "20250623064317_AddCustomerTable.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623064317_AddCustomerTable.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250623064317_AddCustomerTable.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623064317_AddCustomerTable.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250623064317_AddCustomerTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:43:18.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "20250623063939_Addtable.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623063939_Addtable.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250623063939_Addtable.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623063939_Addtable.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250623063939_Addtable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:39:40.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Controllers\\CustomerController.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "backendDistributor\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAswNwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:23:33.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "20250623061659_SalesADDt.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623061659_SalesADDt.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250623061659_SalesADDt.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623061659_SalesADDt.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250623061659_SalesADDt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:16:59.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "20250623061347_Sales.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623061347_Sales.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250623061347_Sales.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623061347_Sales.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250623061347_Sales.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:13:47.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "20250623061155_AddSalesorder.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623061155_AddSalesorder.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250623061155_AddSalesorder.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623061155_AddSalesorder.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250623061155_AddSalesorder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T06:11:56.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "20250623052231_AddTableSale.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623052231_AddTableSale.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250623052231_AddTableSale.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250623052231_AddTableSale.cs",
+              "RelativeToolTip": "backendDistributor\\Migrations\\20250623052231_AddTableSale.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T05:22:31.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "TaxDeclarationCreateDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\TaxDeclarationCreateDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\TaxDeclarationCreateDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\TaxDeclarationCreateDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\TaxDeclarationCreateDto.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T07:25:29.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\appsettings.json",
+              "RelativeDocumentMoniker": "backendDistributor\\appsettings.json",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\appsettings.json",
+              "RelativeToolTip": "backendDistributor\\appsettings.json",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-21T10:50:35.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "TaxDeclarationsController.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\TaxDeclarationsController.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Controllers\\TaxDeclarationsController.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\TaxDeclarationsController.cs",
+              "RelativeToolTip": "backendDistributor\\Controllers\\TaxDeclarationsController.cs",
+              "ViewState": "AgIAAPUAAAAAAAAAAAAswAIBAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T07:34:06.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "TaxDeclarationUpdateDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\TaxDeclarationUpdateDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\DTOs\\TaxDeclarationUpdateDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\DTOs\\TaxDeclarationUpdateDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\DTOs\\TaxDeclarationUpdateDto.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T07:26:32.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "TaxDeclarationDto.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\TaxDeclarationDto.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\TaxDeclarationDto.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\TaxDeclarationDto.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\TaxDeclarationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T07:19:54.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "TaxDeclaration.cs",
+              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\TaxDeclaration.cs",
+              "RelativeDocumentMoniker": "backendDistributor\\Models\\TaxDeclaration.cs",
+              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\TaxDeclaration.cs",
+              "RelativeToolTip": "backendDistributor\\Models\\TaxDeclaration.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA7wCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T07:18:20.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
               "Title": "Vendor.cs",
               "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\Vendor.cs",
               "RelativeDocumentMoniker": "backendDistributor\\Models\\Vendor.cs",
@@ -198,19 +1080,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "20250616115037_VendorGroup.cs",
-              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250616115037_VendorGroup.cs",
-              "RelativeDocumentMoniker": "backendDistributor\\Migrations\\20250616115037_VendorGroup.cs",
-              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Migrations\\20250616115037_VendorGroup.cs",
-              "RelativeToolTip": "backendDistributor\\Migrations\\20250616115037_VendorGroup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T11:50:37.998Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 57,
               "Title": "VendorGroupController.cs",
               "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\VendorGroupController.cs",
               "RelativeDocumentMoniker": "backendDistributor\\Controllers\\VendorGroupController.cs",
@@ -222,7 +1092,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 58,
               "Title": "VendorGroup.cs",
               "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Models\\VendorGroup.cs",
               "RelativeDocumentMoniker": "backendDistributor\\Models\\VendorGroup.cs",
@@ -231,18 +1101,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T11:43:01.067Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SalesOrdersController.cs",
-              "DocumentMoniker": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\SalesOrdersController.cs",
-              "RelativeDocumentMoniker": "backendDistributor\\Controllers\\SalesOrdersController.cs",
-              "ToolTip": "D:\\REACT-PROJECTS\\vedhasoft-distributor\\backendDistributor\\backendDistributor\\Controllers\\SalesOrdersController.cs",
-              "RelativeToolTip": "backendDistributor\\Controllers\\SalesOrdersController.cs",
-              "ViewState": "AgIAAJkBAAAAAAAAAADwv6kBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T09:49:38.015Z"
             }
           ]
         }

@@ -1,217 +1,292 @@
 ﻿using backendDistributor.DTOs;
 using backendDistributor.Models;
-using Microsoft.AspNetCore.Http; // For IFormFile, IWebHostEnvironment
+using backendDistributor.Models.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting; // For IWebHostEnvironment in .NET 6+
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
-using System.Linq;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace backendDistributor.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class SalesOrdersController : ControllerBase
     {
         private readonly CustomerDbContext _context;
-        private readonly IWebHostEnvironment _environment; // For file uploads
+        private readonly IWebHostEnvironment _env;
 
-        public SalesOrdersController(CustomerDbContext context, IWebHostEnvironment environment)
+        public SalesOrdersController(CustomerDbContext context, IWebHostEnvironment env)
         {
             _context = context;
-            _environment = environment;
+            _env = env;
         }
 
-        // POST: api/SalesOrders
-        [HttpPost]
-        [Consumes("multipart/form-data")]
-        public async Task<ActionResult<SalesOrderViewDto>> CreateSalesOrder([FromForm] SalesOrderCreateDto salesOrderCreateDto)
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<SalesOrderListDto>>> GetSalesOrders(
+    [FromQuery] string? salesOrderNo,
+    [FromQuery] string? customerName)
         {
-            if (string.IsNullOrEmpty(salesOrderCreateDto.SalesItemsJson))
+            // Start with a base IQueryable to build upon
+            var query = _context.SalesOrders.AsQueryable();
+
+            // Conditionally apply the search filter for Sales Order Number
+            if (!string.IsNullOrEmpty(salesOrderNo))
             {
-                return BadRequest(new { message = "Sales items JSON is required." });
+                // Using .Contains() allows for partial string matching.
+                // If you need an exact match, use: query = query.Where(o => o.SalesOrderNo == salesOrderNo);
+                query = query.Where(o => o.SalesOrderNo.Contains(salesOrderNo));
             }
 
+            // Conditionally apply the search filter for Customer Name
+            if (!string.IsNullOrEmpty(customerName))
+            {
+                query = query.Where(o => o.CustomerName.Contains(customerName));
+            }
+
+            // Now, apply the rest of your logic to the potentially filtered query
+            var orders = await query
+                .Include(o => o.SalesItems)
+                .Select(order => new SalesOrderListDto
+                {
+                    Id = order.Id,
+                    SalesOrderNo = order.SalesOrderNo,
+                    CustomerCode = order.CustomerCode,
+                    CustomerName = order.CustomerName,
+                    SODate = order.SODate,
+                    SalesRemarks = order.SalesRemarks,
+                    OrderTotal = order.SalesItems.Sum(i => i.Total)
+                })
+                .ToListAsync();
+
+            return Ok(orders);
+        }
+
+        [HttpGet("{id:guid}")]
+        public async Task<ActionResult> GetById(Guid id)
+        {
+            var order = await _context.SalesOrders
+                .Include(o => o.SalesItems)
+                .Include(o => o.Attachments)
+                .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (order == null) return NotFound();
+
+            var result = new
+            {
+                order.Id,
+                order.SalesOrderNo,
+                order.CustomerCode,
+                order.CustomerName,
+                order.SODate,
+                order.DeliveryDate,
+                order.CustomerRefNumber,
+                order.ShipToAddress,
+                order.SalesRemarks,
+                order.SalesEmployee,
+                salesItems = order.SalesItems.Select(i => new
+                {
+                    i.Id,
+                    i.ProductCode,
+                    i.ProductName,
+                    i.Quantity,
+                    i.UOM,
+                    i.Price,
+                    i.WarehouseLocation,
+                    i.TaxCode,
+                    i.TaxPrice,
+                    i.Total
+                }).ToList(),
+                attachments = order.Attachments.Select(a => new
+                {
+                    a.Id,
+                    a.FileName,
+                    a.FilePath,
+                    a.SalesOrderId
+                }).ToList()
+            };
+
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Consumes("multipart/form-data")]
+        public async Task<ActionResult> Create([FromForm] SalesOrderCreateDto dto)
+        {
+            // 1. Check for SalesItemsJson (this assumes frontend SalesAdd.jsx is sending it)
+            if (!Request.Form.TryGetValue("SalesItemsJson", out var itemsJsonString) || string.IsNullOrEmpty(itemsJsonString.ToString()))
+            {
+                return BadRequest(new { message = "Missing or empty SalesItemsJson in form data." });
+            }
+
+            // 2. Deserialize SalesItemsJson
             try
             {
-                var jsonSerializerOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                salesOrderCreateDto.ParsedSalesItems = JsonSerializer.Deserialize<List<SalesOrderItemDto>>(salesOrderCreateDto.SalesItemsJson, jsonSerializerOptions);
-
-                if (salesOrderCreateDto.ParsedSalesItems == null || !salesOrderCreateDto.ParsedSalesItems.Any())
-                {
-                    return BadRequest(new { message = "Sales items list cannot be empty after parsing." });
-                }
+                // Use JsonSerializerOptions that match your Program.cs/Startup.cs if needed, though default should be fine.
+                dto.SalesItems = JsonSerializer.Deserialize<List<SalesItemDto>>(itemsJsonString.ToString());
             }
             catch (JsonException ex)
             {
-                return BadRequest(new { message = "Invalid format for sales items JSON.", details = ex.Message });
+                return BadRequest(new { message = $"Failed to parse SalesItemsJson: {ex.Message}" });
             }
 
-            var salesOrder = new SalesOrder // This is your EF Model instance
+            // 3. Basic check for SalesItems presence after deserialization
+            if (dto.SalesItems == null || !dto.SalesItems.Any())
             {
-                Id = Guid.NewGuid(),
-                SalesOrderNo = salesOrderCreateDto.SalesOrderNo,
-                CustomerCode = salesOrderCreateDto.CustomerCode,
-                CustomerName = salesOrderCreateDto.CustomerName,
-                CustomerRefNumber = salesOrderCreateDto.CustomerRefNumber,
-                ShipToAddress = salesOrderCreateDto.ShipToAddress,
-                SalesRemarks = salesOrderCreateDto.SalesRemarks,
-                SalesEmployee = salesOrderCreateDto.SalesEmployee,
-                CreatedDate = DateTime.UtcNow,
-                ModifiedDate = DateTime.UtcNow
+                return BadRequest(new { message = "SalesItems are required and cannot be empty after parsing." });
+            }
+
+            // 4. ASP.NET Core Model Validation (will check [Required], data types in SalesOrderCreateDto)
+            // This happens automatically before the action method is called if you're not using .SuppressModelStateInvalidFilter()
+            // If you want to explicitly check:
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // Returns detailed validation errors
+            }
+
+
+            // --- Start Business Logic ---
+            var tracker = await _context.SalesOrderNumberTrackers.FindAsync(1) // Assuming ID 1 for single tracker row
+                          ?? new SalesOrderNumberTracker { Id = 1, LastUsedNumber = 1000000 }; // Default if not found
+
+            if (_context.Entry(tracker).State == EntityState.Detached) // If it's a new instance from '??'
+            {
+                _context.SalesOrderNumberTrackers.Add(tracker);
+            }
+            tracker.LastUsedNumber++;
+            string salesOrderNo = $"SO-{tracker.LastUsedNumber}";
+
+            var orderId = Guid.NewGuid();
+            var salesOrder = new SalesOrder
+            {
+                Id = orderId,
+                SalesOrderNo = salesOrderNo,
+                CustomerCode = dto.CustomerCode, // Assumes these are validated by ModelState or are nullable in DTO
+                CustomerName = dto.CustomerName,
+                SODate = dto.SODate,
+                DeliveryDate = dto.DeliveryDate,
+                CustomerRefNumber = dto.CustomerRefNumber,
+                ShipToAddress = dto.ShipToAddress,
+                SalesRemarks = dto.SalesRemarks,
+                SalesEmployee = dto.SalesEmployee,
+                Attachments = new List<SalesOrderAttachment>() // Initialize
             };
 
-            if (DateTime.TryParse(salesOrderCreateDto.SODate, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal, out var soDate))
-                salesOrder.SODate = soDate;
-            if (DateTime.TryParse(salesOrderCreateDto.DeliveryDate, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal, out var deliveryDate))
-                salesOrder.DeliveryDate = deliveryDate;
-
-            if (!string.IsNullOrEmpty(salesOrder.CustomerCode))
+            // Map SalesItemDto to SalesOrderItem entity
+            salesOrder.SalesItems = dto.SalesItems.Select(i => new SalesOrderItem
             {
-                var customer = await _context.Customer.FirstOrDefaultAsync(c => c.Code == salesOrder.CustomerCode);
-                if (customer != null) salesOrder.CustomerId = customer.Id;
-            }
+                // Id = Guid.NewGuid(), // Let DB generate if identity column
+                ProductCode = i.ProductCode ?? "",       // Handle potential null from DTO if entity expects non-null
+                ProductName = i.ProductName ?? "",     // Handle potential null
+                Quantity = i.Quantity,                 // decimal from DTO to decimal in Entity
+                UOM = i.UOM ?? "",                     // Handle potential null
+                Price = i.Price,                       // decimal from DTO to decimal in Entity
+                WarehouseLocation = i.WarehouseLocation ?? "", // Handle potential null
+                TaxCode = i.TaxCode,                   // string? from DTO to string? in Entity
+                TaxPrice = i.TaxPrice,                 // decimal? from DTO to decimal? in Entity
+                Total = i.Total                        // decimal from DTO to decimal in Entity
+                                                       // SalesOrderId will be set by EF Core relationship fixup or you can set it: SalesOrderId = orderId
+            }).ToList();
 
-            foreach (var itemDto in salesOrderCreateDto.ParsedSalesItems)
+            // Handle File Uploads
+            if (dto.UploadedFiles != null && dto.UploadedFiles.Any())
             {
-                salesOrder.SalesOrderItems.Add(new SalesOrderItem // This is your EF Model SalesOrderItem
+                string uploadBasePath = _env.WebRootPath ?? _env.ContentRootPath;
+                string uploadFolderRelative = "uploads";
+                string fullUploadPath = Path.Combine(uploadBasePath, uploadFolderRelative);
+                Directory.CreateDirectory(fullUploadPath);
+
+                foreach (var file in dto.UploadedFiles)
                 {
-                    Id = Guid.NewGuid(),
-                    SalesOrderId = salesOrder.Id,
-                    ProductCode = itemDto.ProductCode,
-                    ProductName = itemDto.ProductName,
-                    Quantity = itemDto.Quantity,
-                    UOM = itemDto.UOM,
-                    Price = itemDto.Price,
-                    WarehouseLocation = itemDto.WarehouseLocation,
-                    TaxCode = itemDto.TaxCode,
-                    TaxPrice = itemDto.TaxPrice,
-                    Total = itemDto.Total // This is item.Quantity * item.Price + item.TaxPrice
-                });
-            }
+                    if (file.Length > 0)
+                    {
+                        var clientFileName = Path.GetFileName(file.FileName);
+                        var uniqueFileName = $"{Guid.NewGuid()}_{clientFileName}";
+                        var physicalFilePath = Path.Combine(fullUploadPath, uniqueFileName);
+                        var relativePathForDb = Path.Combine(uploadFolderRelative, uniqueFileName).Replace(Path.DirectorySeparatorChar, '/');
 
-            await ProcessFileUploads(salesOrderCreateDto.UploadedFiles, salesOrder);
+                        await using (var stream = new FileStream(physicalFilePath, FileMode.Create))
+                        {
+                            await file.CopyToAsync(stream);
+                        }
+                        salesOrder.Attachments.Add(new SalesOrderAttachment
+                        {
+                            FileName = uniqueFileName,
+                            // OriginalFileName = clientFileName, // If you have this property
+                            FilePath = relativePathForDb,
+                            // SalesOrderId will be set by EF Core
+                        });
+                    }
+                }
+            }
 
             _context.SalesOrders.Add(salesOrder);
-            await _context.SaveChangesAsync();
+            // _context.SalesOrderNumberTrackers.Update(tracker); // EF tracks it if loaded with FindAsync
 
-            // After saving, 'salesOrder' (EF model) has its items.
-            // Now, map this EF model 'salesOrder' to 'SalesOrderViewDto' for the response.
-            var viewDto = MapSalesOrderToViewDto(salesOrder);
-            return CreatedAtAction(nameof(GetSalesOrder), new { id = salesOrder.Id }, viewDto);
+            try
+            {
+                await _context.SaveChangesAsync();
+                return Ok(new { message = $"Sales order {salesOrderNo} created successfully!", id = salesOrder.Id, salesOrderNo = salesOrderNo });
+            }
+            catch (DbUpdateException dbEx) // Catch specific database update errors
+            {
+                // Log the detailed exception, including inner exceptions
+                Console.Error.WriteLine($"DbUpdateException saving order: {dbEx.ToString()}");
+                // Inspect dbEx.InnerException for more specific SQL errors
+                var innermostException = dbEx.InnerException;
+                while (innermostException?.InnerException != null)
+                {
+                    innermostException = innermostException.InnerException;
+                }
+                string errorMessage = innermostException?.Message ?? dbEx.Message;
+                return StatusCode(500, new { message = "Error saving to database.", details = errorMessage });
+            }
+            catch (Exception ex) // General catch-all
+            {
+                Console.Error.WriteLine($"Generic error saving order: {ex.ToString()}");
+                return StatusCode(500, new { message = "An unexpected error occurred.", details = ex.Message });
+            }
         }
 
-        // GET: api/SalesOrders
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<SalesOrderViewDto>>> GetSalesOrders(
-            [FromQuery] string? salesOrderNo,
-            [FromQuery] string? customerName)
-        {
-            var query = _context.SalesOrders
-                .Include(so => so.SalesOrderItems) // Crucial: Include items to calculate total
-                .Include(so => so.Attachments)
-                .AsQueryable();
-
-            if (!string.IsNullOrEmpty(salesOrderNo))
-            {
-                query = query.Where(so => so.SalesOrderNo != null && so.SalesOrderNo.ToLower().Contains(salesOrderNo.ToLower()));
-            }
-            if (!string.IsNullOrEmpty(customerName))
-            {
-                query = query.Where(so => so.CustomerName != null && so.CustomerName.ToLower().Contains(customerName.ToLower()));
-            }
-
-            // The .Select() will project each 'SalesOrder' entity to a 'SalesOrderViewDto'
-            // using our MapSalesOrderToViewDto method.
-            var salesOrders = await query
-                .OrderByDescending(so => so.CreatedDate)
-                .Select(so => MapSalesOrderToViewDto(so)) // MapSalesOrderToViewDto is called for each 'so'
-                .ToListAsync();
-
-            return Ok(salesOrders);
-        }
-
-        // GET: api/SalesOrders/{id}
-        [HttpGet("{id}")]
-        public async Task<ActionResult<SalesOrderViewDto>> GetSalesOrder(Guid id)
-        {
-            // Use .Select directly to map to DTO, or fetch entity then map
-            var salesOrderEntity = await _context.SalesOrders
-                .Include(so => so.SalesOrderItems) // Crucial: Include items to calculate total
-                .Include(so => so.Attachments)
-                .FirstOrDefaultAsync(so => so.Id == id);
-
-            if (salesOrderEntity == null)
-            {
-                return NotFound();
-            }
-
-            var viewDto = MapSalesOrderToViewDto(salesOrderEntity); // Map the fetched entity
-            return Ok(viewDto);
-        }
-
-        // PUT: api/SalesOrders/{id}
-        [HttpPut("{id}")]
+        [HttpPut("{id:guid}")]
         [Consumes("multipart/form-data")]
-        public async Task<IActionResult> UpdateSalesOrder(Guid id, [FromForm] SalesOrderUpdateDto salesOrderUpdateDto)
+        public async Task<IActionResult> Update(Guid id, [FromForm] SalesOrderCreateDto dto)
         {
-            var salesOrderToUpdate = await _context.SalesOrders
-                                .Include(so => so.SalesOrderItems)
-                                .Include(so => so.Attachments)
-                                .FirstOrDefaultAsync(so => so.Id == id);
+            var existingOrder = await _context.SalesOrders
+                .Include(o => o.SalesItems)
+                .Include(o => o.Attachments)
+                .FirstOrDefaultAsync(o => o.Id == id);
 
-            if (salesOrderToUpdate == null)
+            if (existingOrder == null)
             {
                 return NotFound(new { message = $"Sales Order with ID {id} not found." });
             }
 
-            salesOrderToUpdate.SalesOrderNo = salesOrderUpdateDto.SalesOrderNo ?? salesOrderToUpdate.SalesOrderNo;
-            salesOrderToUpdate.CustomerCode = salesOrderUpdateDto.CustomerCode ?? salesOrderToUpdate.CustomerCode;
-            salesOrderToUpdate.CustomerName = salesOrderUpdateDto.CustomerName ?? salesOrderToUpdate.CustomerName;
-            salesOrderToUpdate.CustomerRefNumber = salesOrderUpdateDto.CustomerRefNumber ?? salesOrderToUpdate.CustomerRefNumber;
-            salesOrderToUpdate.ShipToAddress = salesOrderUpdateDto.ShipToAddress ?? salesOrderToUpdate.ShipToAddress;
-            salesOrderToUpdate.SalesRemarks = salesOrderUpdateDto.SalesRemarks ?? salesOrderToUpdate.SalesRemarks;
-            salesOrderToUpdate.SalesEmployee = salesOrderUpdateDto.SalesEmployee ?? salesOrderToUpdate.SalesEmployee;
-            salesOrderToUpdate.ModifiedDate = DateTime.UtcNow;
+            // Update scalar properties
+            existingOrder.CustomerCode = dto.CustomerCode;
+            existingOrder.CustomerName = dto.CustomerName;
+            existingOrder.SODate = dto.SODate;
+            existingOrder.DeliveryDate = dto.DeliveryDate;
+            existingOrder.CustomerRefNumber = dto.CustomerRefNumber;
+            existingOrder.ShipToAddress = dto.ShipToAddress;
+            existingOrder.SalesRemarks = dto.SalesRemarks;
+            existingOrder.SalesEmployee = dto.SalesEmployee;
 
-            if (DateTime.TryParse(salesOrderUpdateDto.SODate, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal, out var soDate))
-                salesOrderToUpdate.SODate = soDate;
-            if (DateTime.TryParse(salesOrderUpdateDto.DeliveryDate, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal, out var deliveryDate))
-                salesOrderToUpdate.DeliveryDate = deliveryDate;
-
-            if (!string.IsNullOrEmpty(salesOrderUpdateDto.CustomerCode) && salesOrderUpdateDto.CustomerCode != salesOrderToUpdate.CustomerCode)
-            {
-                var customer = await _context.Customer.FirstOrDefaultAsync(c => c.Code == salesOrderUpdateDto.CustomerCode);
-                salesOrderToUpdate.CustomerId = customer?.Id;
-                if (customer != null && string.IsNullOrEmpty(salesOrderUpdateDto.CustomerName))
-                {
-                    salesOrderToUpdate.CustomerName = customer.Name;
-                }
-            }
-
-            if (!string.IsNullOrEmpty(salesOrderUpdateDto.SalesItemsJson))
+            // Handle SalesItems: Replace all existing items with new ones from DTO
+            if (!string.IsNullOrEmpty(dto.SalesItemsJson))
             {
                 try
                 {
-                    var jsonSerializerOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                    salesOrderUpdateDto.ParsedSalesItems = JsonSerializer.Deserialize<List<SalesOrderItemDto>>(salesOrderUpdateDto.SalesItemsJson, jsonSerializerOptions);
+                    var newSalesItemsDto = JsonSerializer.Deserialize<List<SalesItemDto>>(dto.SalesItemsJson);
 
-                    if (salesOrderUpdateDto.ParsedSalesItems != null)
+                    var itemsToRemove = existingOrder.SalesItems.ToList();
+                    _context.SalesOrderItems.RemoveRange(itemsToRemove);
+                    existingOrder.SalesItems.Clear();
+
+                    if (newSalesItemsDto != null)
                     {
-                        _context.SalesOrderItems.RemoveRange(salesOrderToUpdate.SalesOrderItems);
-                        salesOrderToUpdate.SalesOrderItems.Clear();
-
-                        foreach (var itemDto in salesOrderUpdateDto.ParsedSalesItems)
+                        foreach (var itemDto in newSalesItemsDto)
                         {
-                            salesOrderToUpdate.SalesOrderItems.Add(new SalesOrderItem
+                            existingOrder.SalesItems.Add(new SalesOrderItem
                             {
-                                Id = Guid.NewGuid(), // Or handle existing item IDs if you want to update items
-                                SalesOrderId = salesOrderToUpdate.Id,
                                 ProductCode = itemDto.ProductCode,
                                 ProductName = itemDto.ProductName,
                                 Quantity = itemDto.Quantity,
@@ -220,207 +295,148 @@ namespace backendDistributor.Controllers
                                 WarehouseLocation = itemDto.WarehouseLocation,
                                 TaxCode = itemDto.TaxCode,
                                 TaxPrice = itemDto.TaxPrice,
-                                Total = itemDto.Total
+                                Total = itemDto.Total,
+                                SalesOrderId = existingOrder.Id
                             });
                         }
                     }
                 }
                 catch (JsonException ex)
                 {
-                    return BadRequest(new { message = "Invalid format for sales items JSON.", details = ex.Message });
+                    return BadRequest(new { message = $"Invalid SalesItemsJson format: {ex.Message}" });
                 }
             }
-
-            if (salesOrderUpdateDto.FilesToDelete != null && salesOrderUpdateDto.FilesToDelete.Any())
+            else
             {
-                var attachmentsToDelete = salesOrderToUpdate.Attachments
-                                            .Where(att => salesOrderUpdateDto.FilesToDelete.Contains(att.Id))
-                                            .ToList();
-                foreach (var att in attachmentsToDelete)
+                return BadRequest(new { message = "SalesItemsJson is required for updating sales items." });
+            }
+
+            existingOrder.Attachments ??= new List<SalesOrderAttachment>();
+
+            // Handle Attachments Deletion
+            if (!string.IsNullOrEmpty(dto.FilesToDeleteJson))
+            {
+                try
                 {
-                    if (!string.IsNullOrEmpty(att.StoredFileName))
+                    var fileIdsToDelete = JsonSerializer.Deserialize<List<Guid>>(dto.FilesToDeleteJson);
+                    if (fileIdsToDelete != null && fileIdsToDelete.Any())
                     {
-                        var filePath = Path.Combine(_environment.ContentRootPath, "Uploads", "SalesAttachments", att.StoredFileName);
-                        if (System.IO.File.Exists(filePath))
+                        var attachmentsToDelete = existingOrder.Attachments
+                            .Where(a => fileIdsToDelete.Contains(a.Id))
+                            .ToList();
+
+                        if (attachmentsToDelete.Any())
                         {
-                            System.IO.File.Delete(filePath);
+                            string fileStorageBasePath = _env.WebRootPath ?? _env.ContentRootPath;
+                            foreach (var attachment in attachmentsToDelete)
+                            {
+                                if (!string.IsNullOrEmpty(attachment.FilePath))
+                                {
+                                    var physicalPath = Path.Combine(fileStorageBasePath, attachment.FilePath);
+                                    if (System.IO.File.Exists(physicalPath))
+                                    {
+                                        try { System.IO.File.Delete(physicalPath); }
+                                        catch (IOException ex) { Console.Error.WriteLine($"Error deleting attachment file {physicalPath}: {ex.Message}"); }
+                                    }
+                                }
+                                existingOrder.Attachments.Remove(attachment);
+                            }
+                            _context.SalesOrderAttachments.RemoveRange(attachmentsToDelete);
                         }
                     }
-                    _context.SalesOrderAttachments.Remove(att);
+                }
+                catch (JsonException ex)
+                {
+                    return BadRequest(new { message = $"Invalid FilesToDeleteJson format: {ex.Message}" });
                 }
             }
-            await ProcessFileUploads(salesOrderUpdateDto.UploadedFiles, salesOrderToUpdate);
 
-            _context.Entry(salesOrderToUpdate).State = EntityState.Modified;
+            // Handle New Attachments Upload
+            if (dto.UploadedFiles != null && dto.UploadedFiles.Any())
+            {
+                string uploadBasePath = _env.WebRootPath ?? _env.ContentRootPath;
+                string uploadFolderRelative = "uploads";
+                string fullUploadPath = Path.Combine(uploadBasePath, uploadFolderRelative);
+                Directory.CreateDirectory(fullUploadPath);
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SalesOrderExists(id)) return NotFound();
-                else throw;
-            }
-            return NoContent();
-        }
-
-        // DELETE: api/SalesOrders/{id}
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteSalesOrder(Guid id)
-        {
-            var salesOrder = await _context.SalesOrders
-                                    .Include(so => so.Attachments) // Include attachments to delete files
-                                    .FirstOrDefaultAsync(so => so.Id == id);
-            if (salesOrder == null)
-            {
-                return NotFound(new { message = $"Sales Order with ID {id} not found." });
-            }
-
-            foreach (var att in salesOrder.Attachments)
-            {
-                if (!string.IsNullOrEmpty(att.StoredFileName))
+                foreach (var file in dto.UploadedFiles)
                 {
-                    var filePath = Path.Combine(_environment.ContentRootPath, "Uploads", "SalesAttachments", att.StoredFileName);
-                    if (System.IO.File.Exists(filePath))
+                    if (file.Length > 0)
                     {
-                        System.IO.File.Delete(filePath);
-                    }
-                }
-            }
-            // EF Core cascade delete should handle SalesOrderItems and SalesOrderAttachment records
-            // if configured correctly in your DbContext relationship.
-            // If not, you might need to explicitly remove them:
-            // _context.SalesOrderItems.RemoveRange(salesOrder.SalesOrderItems);
-            // _context.SalesOrderAttachments.RemoveRange(salesOrder.Attachments);
-            _context.SalesOrders.Remove(salesOrder);
-            await _context.SaveChangesAsync();
-            return Ok(new { message = $"Sales Order with ID {id} and its items/attachments have been deleted." });
-        }
+                        // Use Path.GetFileName to get just the file name part from the client
+                        var clientFileName = Path.GetFileName(file.FileName);
+                        var uniqueFileName = $"{Guid.NewGuid()}_{clientFileName}"; // Create a unique name for storage
+                        var physicalFilePath = Path.Combine(fullUploadPath, uniqueFileName);
+                        var relativePathForDb = Path.Combine(uploadFolderRelative, uniqueFileName).Replace(Path.DirectorySeparatorChar, '/');
 
-        // GET: api/SalesOrders/attachment/{attachmentId}
-        [HttpGet("attachment/{attachmentId}")]
-        public async Task<IActionResult> DownloadAttachment(Guid attachmentId)
-        {
-            var attachment = await _context.SalesOrderAttachments.FindAsync(attachmentId);
-            if (attachment == null) return NotFound("Attachment not found.");
-
-            var contentType = attachment.ContentType ?? "application/octet-stream";
-            var clientFileName = attachment.FileName ?? "downloadedFile";
-
-            if (string.IsNullOrEmpty(attachment.StoredFileName))
-            {
-                return NotFound("Attachment metadata is incomplete (missing stored file name).");
-            }
-
-            var uploadsFolderPath = Path.Combine(_environment.ContentRootPath, "Uploads", "SalesAttachments");
-            var filePath = Path.Combine(uploadsFolderPath, attachment.StoredFileName);
-
-            if (!System.IO.File.Exists(filePath)) return NotFound("File not found on server.");
-
-            var memory = new MemoryStream();
-            await using (var stream = new FileStream(filePath, FileMode.Open))
-            {
-                await stream.CopyToAsync(memory);
-            }
-            memory.Position = 0;
-            return File(memory, contentType, clientFileName);
-        }
-
-        private bool SalesOrderExists(Guid id)
-        {
-            return _context.SalesOrders.Any(e => e.Id == id);
-        }
-
-        private async Task ProcessFileUploads(List<IFormFile>? files, SalesOrder salesOrder)
-        {
-            if (files != null && files.Any())
-            {
-                var uploadsFolderPath = Path.Combine(_environment.ContentRootPath, "Uploads", "SalesAttachments");
-                if (!Directory.Exists(uploadsFolderPath))
-                {
-                    Directory.CreateDirectory(uploadsFolderPath);
-                }
-
-                foreach (var file in files)
-                {
-                    if (file.Length > 0 && !string.IsNullOrEmpty(file.FileName))
-                    {
-                        var originalFileName = file.FileName;
-                        var extension = Path.GetExtension(originalFileName);
-                        var uniqueStoredFileName = Guid.NewGuid().ToString() + (string.IsNullOrEmpty(extension) ? "" : extension);
-                        var filePath = Path.Combine(uploadsFolderPath, uniqueStoredFileName);
-
-                        await using (var stream = new FileStream(filePath, FileMode.Create))
+                        await using (var stream = new FileStream(physicalFilePath, FileMode.Create))
                         {
                             await file.CopyToAsync(stream);
                         }
 
-                        var attachment = new SalesOrderAttachment
+                        existingOrder.Attachments.Add(new SalesOrderAttachment
                         {
-                            Id = Guid.NewGuid(),
-                            SalesOrder = salesOrder,
-                            FileName = originalFileName,
-                            StoredFileName = uniqueStoredFileName,
-                            ContentType = file.ContentType ?? "application/octet-stream",
-                            FileSize = file.Length,
-                            UploadedDate = DateTime.UtcNow
-                        };
-                        salesOrder.Attachments.Add(attachment);
+                            FileName = uniqueFileName, // This stores the unique name (e.g., guid_clientFileName.ext)
+                                                       // No OriginalFileName property is being set here
+                            FilePath = relativePathForDb,
+                            SalesOrderId = existingOrder.Id
+                        });
                     }
                 }
             }
-        }
 
-        // --- THIS IS THE MODIFIED METHOD ---
-        // Made static to resolve client projection issue
-        private static SalesOrderViewDto MapSalesOrderToViewDto(SalesOrder so) // 'so' is your EF Model 'SalesOrder'
-        {
-            // 1. Map the SalesOrderItems (from the EF Model 'so') to SalesOrderItemViewDto
-            var mappedItems = so.SalesOrderItems?.Select(item => new SalesOrderItemViewDto
+            // Save Changes
+            try
             {
-                Id = item.Id,
-                ProductCode = item.ProductCode,
-                ProductName = item.ProductName,
-                Quantity = item.Quantity,
-                UOM = item.UOM,
-                Price = item.Price,
-                WarehouseLocation = item.WarehouseLocation,
-                TaxCode = item.TaxCode,
-                TaxPrice = item.TaxPrice,
-                Total = item.Total // This 'Total' is from the SalesOrderItem EF Model
-            }).ToList() ?? new List<SalesOrderItemViewDto>(); // Ensure mappedItems is never null
-
-            // 2. Create the SalesOrderViewDto and populate its properties
-            return new SalesOrderViewDto
+                await _context.SaveChangesAsync();
+                return Ok(new { message = "Sales order updated successfully!" });
+            }
+            catch (DbUpdateConcurrencyException dbEx)
             {
-                Id = so.Id,
-                SalesOrderNo = so.SalesOrderNo,
-                CustomerCode = so.CustomerCode,
-                CustomerName = so.CustomerName,
-                SODate = so.SODate,
-                DeliveryDate = so.DeliveryDate,
-                CustomerRefNumber = so.CustomerRefNumber,
-                ShipToAddress = so.ShipToAddress,
-                SalesRemarks = so.SalesRemarks,
-                SalesEmployee = so.SalesEmployee,
-                CreatedDate = so.CreatedDate,
-
-                // Calculate OrderTotal by summing the 'Total' of all 'mappedItems'
-                OrderTotal = mappedItems.Sum(item => item.Total),
-
-                SalesOrderItems = mappedItems, // Assign the list of already mapped items
-
-                Attachments = so.Attachments?.Select(att => new SalesOrderAttachmentViewDto
+                Console.WriteLine($"❗ DbUpdateConcurrencyException during SalesOrder Update for ID {id}. Details: {dbEx.Message}");
+                var conflictingEntry = dbEx.Entries.SingleOrDefault();
+                if (conflictingEntry?.Entity is SalesOrder so && so.Id == id)
                 {
-                    Id = att.Id,
-                    FileName = att.FileName,
-                    ContentType = att.ContentType,
-                    FileSize = att.FileSize,
-                    DownloadUrl = $"/api/SalesOrders/attachment/{att.Id}"
-                }).ToList() ?? new List<SalesOrderAttachmentViewDto>()
-            };
+                    var databaseValues = await conflictingEntry.GetDatabaseValuesAsync();
+                    if (databaseValues == null)
+                    {
+                        Console.WriteLine($"SalesOrder ID {id} appears to have been deleted from the database before save.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Detailed concurrency conflict for SalesOrder ID {id}:");
+                        foreach (var prop in conflictingEntry.Properties)
+                        {
+                            Console.WriteLine($"  Property: {prop.Metadata.Name}, Original: '{conflictingEntry.OriginalValues[prop.Metadata.Name]}', Database: '{databaseValues[prop.Metadata.Name]}', Current: '{conflictingEntry.CurrentValues[prop.Metadata.Name]}'");
+                        }
+                    }
+                }
+                return Conflict(new { message = "The record was modified or deleted since it was loaded. Please refresh and try again." });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❗ Generic Exception during SalesOrder Update for ID {id}. Details: {ex.ToString()}");
+                return StatusCode(500, new { message = "An unexpected error occurred during the update: " + ex.Message });
+            }
         }
-        // --- END OF MODIFIED METHOD ---
+
+
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var existing = await _context.SalesOrders
+                .Include(o => o.SalesItems)
+                .Include(o => o.Attachments)
+                .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (existing == null) return NotFound();
+
+            _context.SalesOrderItems.RemoveRange(existing.SalesItems);
+            _context.SalesOrderAttachments.RemoveRange(existing.Attachments);
+            _context.SalesOrders.Remove(existing);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
 }

@@ -1,5 +1,6 @@
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\bin\Debug\net8.0\appsettings.Development.json
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\bin\Debug\net8.0\appsettings.json
+D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\bin\Debug\net8.0\backendDistributor.staticwebassets.runtime.json
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\bin\Debug\net8.0\backendDistributor.staticwebassets.endpoints.json
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\bin\Debug\net8.0\backendDistributor.exe
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\bin\Debug\net8.0\backendDistributor.deps.json
@@ -237,16 +238,16 @@ D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\ob
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\backendDistributor.csproj.CoreCompileInputs.cache
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\backendDistributor.MvcApplicationPartsAssemblyInfo.cs
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\backendDistributor.MvcApplicationPartsAssemblyInfo.cache
+D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\backendDistributor.sourcelink.json
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\scopedcss\bundle\backendDistributor.styles.css
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\staticwebassets.build.json
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\staticwebassets.development.json
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\backendD.D4B771FE.Up2Date
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\backendDistributor.dll
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\refint\backendDistributor.dll
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\backendDistributor.pdb
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\backendDistributor.genruntimeconfig.cache
 D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\ref\backendDistributor.dll
-D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\bin\Debug\net8.0\backendDistributor.staticwebassets.runtime.json
+D:\REACT-PROJECTS\vedhasoft-distributor\backendDistributor\backendDistributor\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

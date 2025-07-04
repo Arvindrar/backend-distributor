@@ -229,6 +229,221 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "backendDistributor.Controllers.GRPOsController",
+    "Method": "GetGRPOs",
+    "RelativePath": "api/GRPOs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "grpoNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "vendorName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "purchaseOrderNo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[backendDistributor.DTOs.GRPOListDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.GRPOsController",
+    "Method": "CreateGRPO",
+    "RelativePath": "api/GRPOs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PurchaseOrderNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GRPODate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeliveryDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorRefNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ShipToAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GRPORemarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GRPOItemsJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UploadedFiles",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FilesToDeleteJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GRPOItems",
+        "Type": "System.Collections.Generic.List\u00601[[backendDistributor.DTOs.GRPOItemDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.GRPOsController",
+    "Method": "GetGRPOById",
+    "RelativePath": "api/GRPOs/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.GRPOsController",
+    "Method": "UpdateGRPO",
+    "RelativePath": "api/GRPOs/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "PurchaseOrderNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GRPODate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeliveryDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorRefNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ShipToAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GRPORemarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GRPOItemsJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UploadedFiles",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FilesToDeleteJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GRPOItems",
+        "Type": "System.Collections.Generic.List\u00601[[backendDistributor.DTOs.GRPOItemDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.GRPOsController",
+    "Method": "DeleteGRPO",
+    "RelativePath": "api/GRPOs/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "backendDistributor.Controllers.ProductController",
     "Method": "GetProducts",
     "RelativePath": "api/Product",
@@ -538,6 +753,206 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "backendDistributor.Controllers.PurchaseOrdersController",
+    "Method": "GetPurchaseOrders",
+    "RelativePath": "api/PurchaseOrders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "purchaseOrderNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "vendorName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[backendDistributor.DTOs.PurchaseOrderListDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.PurchaseOrdersController",
+    "Method": "Create",
+    "RelativePath": "api/PurchaseOrders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "VendorCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PODate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeliveryDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorRefNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ShipToAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchaseRemarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchaseItemsJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UploadedFiles",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FilesToDeleteJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchaseItems",
+        "Type": "System.Collections.Generic.List\u00601[[backendDistributor.DTOs.PurchaseItemDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.PurchaseOrdersController",
+    "Method": "GetById",
+    "RelativePath": "api/PurchaseOrders/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.PurchaseOrdersController",
+    "Method": "Update",
+    "RelativePath": "api/PurchaseOrders/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "VendorCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PODate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeliveryDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorRefNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ShipToAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchaseRemarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchaseItemsJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UploadedFiles",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FilesToDeleteJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchaseItems",
+        "Type": "System.Collections.Generic.List\u00601[[backendDistributor.DTOs.PurchaseItemDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.PurchaseOrdersController",
+    "Method": "Delete",
+    "RelativePath": "api/PurchaseOrders/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "backendDistributor.Controllers.RoutesController",
     "Method": "GetRoutes",
     "RelativePath": "api/Routes",
@@ -757,87 +1172,6 @@
   },
   {
     "ContainingType": "backendDistributor.Controllers.SalesOrdersController",
-    "Method": "CreateSalesOrder",
-    "RelativePath": "api/SalesOrders",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "SalesOrderNo",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "CustomerCode",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "CustomerName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SODate",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "DeliveryDate",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "CustomerRefNumber",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ShipToAddress",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SalesRemarks",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SalesEmployee",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SalesItemsJson",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "UploadedFiles",
-        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "ParsedSalesItems",
-        "Type": "System.Collections.Generic.List\u00601[[backendDistributor.DTOs.SalesOrderItemDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "backendDistributor.DTOs.SalesOrderViewDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "backendDistributor.Controllers.SalesOrdersController",
     "Method": "GetSalesOrders",
     "RelativePath": "api/SalesOrders",
     "HttpMethod": "GET",
@@ -857,7 +1191,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[backendDistributor.DTOs.SalesOrderViewDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[backendDistributor.Models.DTOs.SalesOrderListDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -869,48 +1203,12 @@
   },
   {
     "ContainingType": "backendDistributor.Controllers.SalesOrdersController",
-    "Method": "GetSalesOrder",
-    "RelativePath": "api/SalesOrders/{id}",
-    "HttpMethod": "GET",
+    "Method": "Create",
+    "RelativePath": "api/SalesOrders",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "backendDistributor.DTOs.SalesOrderViewDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "backendDistributor.Controllers.SalesOrdersController",
-    "Method": "UpdateSalesOrder",
-    "RelativePath": "api/SalesOrders/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "SalesOrderNo",
-        "Type": "System.String",
-        "IsRequired": false
-      },
       {
         "Name": "CustomerCode",
         "Type": "System.String",
@@ -923,12 +1221,12 @@
       },
       {
         "Name": "SODate",
-        "Type": "System.String",
+        "Type": "System.DateTime",
         "IsRequired": false
       },
       {
         "Name": "DeliveryDate",
-        "Type": "System.String",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
@@ -952,6 +1250,11 @@
         "IsRequired": false
       },
       {
+        "Name": "SalesItems",
+        "Type": "System.Collections.Generic.List\u00601[[backendDistributor.DTOs.SalesItemDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
         "Name": "SalesItemsJson",
         "Type": "System.String",
         "IsRequired": false
@@ -962,13 +1265,8 @@
         "IsRequired": false
       },
       {
-        "Name": "FilesToDelete",
-        "Type": "System.Collections.Generic.List\u00601[[System.Guid, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "ParsedSalesItems",
-        "Type": "System.Collections.Generic.List\u00601[[backendDistributor.DTOs.SalesOrderItemDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Name": "FilesToDeleteJson",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
@@ -976,9 +1274,9 @@
   },
   {
     "ContainingType": "backendDistributor.Controllers.SalesOrdersController",
-    "Method": "DeleteSalesOrder",
+    "Method": "GetById",
     "RelativePath": "api/SalesOrders/{id}",
-    "HttpMethod": "DELETE",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -992,14 +1290,90 @@
   },
   {
     "ContainingType": "backendDistributor.Controllers.SalesOrdersController",
-    "Method": "DownloadAttachment",
-    "RelativePath": "api/SalesOrders/attachment/{attachmentId}",
-    "HttpMethod": "GET",
+    "Method": "Update",
+    "RelativePath": "api/SalesOrders/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "attachmentId",
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "CustomerCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CustomerName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SODate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeliveryDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CustomerRefNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ShipToAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SalesRemarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SalesEmployee",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SalesItems",
+        "Type": "System.Collections.Generic.List\u00601[[backendDistributor.DTOs.SalesItemDto, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SalesItemsJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UploadedFiles",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FilesToDeleteJson",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.SalesOrdersController",
+    "Method": "Delete",
+    "RelativePath": "api/SalesOrders/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -1659,6 +2033,115 @@
     "ContainingType": "backendDistributor.Controllers.VendorGroupController",
     "Method": "DeleteVendorGroup",
     "RelativePath": "api/VendorGroup/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.WarehousesController",
+    "Method": "GetWarehouses",
+    "RelativePath": "api/Warehouses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[backendDistributor.Models.Warehouse, backendDistributor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.WarehousesController",
+    "Method": "PostWarehouse",
+    "RelativePath": "api/Warehouses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "warehouse",
+        "Type": "backendDistributor.Models.Warehouse",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "backendDistributor.Models.Warehouse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.WarehousesController",
+    "Method": "GetWarehouse",
+    "RelativePath": "api/Warehouses/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "backendDistributor.Models.Warehouse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.WarehousesController",
+    "Method": "PutWarehouse",
+    "RelativePath": "api/Warehouses/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "warehouse",
+        "Type": "backendDistributor.Models.Warehouse",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backendDistributor.Controllers.WarehousesController",
+    "Method": "DeleteWarehouse",
+    "RelativePath": "api/Warehouses/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
